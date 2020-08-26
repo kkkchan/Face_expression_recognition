@@ -6,7 +6,7 @@ from PIL import Image, ImageTk
 
 class MyVideoCapture:
     """docstring for MyVideoCapture"""
-    def __init__(self, video_source=0, rate):
+    def __init__(self, rate, video_source=0):
         self.rate = rate
         self.vid = cv2.VideoCapture(video_source)
         if not self.vid.isOpened():
@@ -34,7 +34,7 @@ class MyVideoCapture:
 
 
 class App:
-    def __init__(self, window, window_title, rate=0.5):
+    def __init__(self, window, window_title, rate=1):
         self.window = window
         self.window.title(window_title)
         self.vid = MyVideoCapture(rate=rate)
