@@ -74,7 +74,7 @@ class App:
 
 
         # 时延
-        self.delay = 50
+        self.delay = 15
         self.update()
 
         self.window.mainloop()
